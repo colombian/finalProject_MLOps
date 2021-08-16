@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Diabetes predictor</title>
+    <link rel="icon" type="image/png" href="https://icons-for-free.com/download-icon-science-131964743754853130_512.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='styles/carousel.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Predictions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/predict/individual">Individual</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/predict/group">Group</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!--div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <!--rect width="100%" height="100%" fill="#777"/>
+          <image href="https://health.usf.edu/-/media/Images/Care/Diabetes-Center/DiabetesCare.ashx?h=225&w=400&la=en&hash=BBACBD3A7D9F0EBE6076B974E68FEF45A43C136F" width="80%" height="100%"/>
+        </svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Chek if you're at risk.</h1>
+            <p>Diabetes type 2 is a preventable desease, take couple of minutes to check if you're at risk with our test </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Individual Check up</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <!--rect width="100%" height="100%" fill="#777"/>
+          <image href="https://www.cdc.gov/diabetes/images/library/features/diabetes-family-friends_456px.jpg" width="100%" height="100%"/>
+        </svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Check for others.</h1>
+            <p>If you need wonder about you're significant others, about diabetes risk, check for the whole pack!</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div-->
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!--Spacer for improved visualization-->
+  </div>
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="offset-lg-2 col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <!--rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text-->
+            <image href="https://health.usf.edu/-/media/Images/Care/Diabetes-Center/DiabetesCare.ashx?h=225&w=400&la=en&hash=BBACBD3A7D9F0EBE6076B974E68FEF45A43C136F" width="100%" height="100%"/>
+        </svg>
+
+        <h2>Chek if you're at risk.</h2>
+        <p>Diabetes type 2 is a preventable desease, take couple of minutes to check if you're at risk with our test.</p>
+        <p><a class="btn btn-secondary" href="/predict/individual">Individual Check up &raquo;</a></p>
+      </div>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+          <!--rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text-->
+          <image href="https://www.cdc.gov/diabetes/images/library/features/diabetes-family-friends_456px.jpg" width="100%" height="100%"/>
+        </svg>
+
+        <h2>Check for others.</h2>
+        <p>If you need wonder about you're significant others, about diabetes risk, check for the whole pack!</p>
+        <p><a class="btn btn-secondary" href="/predict/group">Check the pack! &raquo;</a></p>
+      </div>
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">WHO and Diabetes</h2>
+        <p class="lead">Diabetes is a chronic, metabolic disease characterized by elevated levels of blood glucose (or blood sugar), which leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves. The most common is type 2 diabetes, usually in adults, which occurs when the body becomes resistant to insulin or doesn't make enough insulin. In the past three decades the prevalence of type 2 diabetes has risen dramatically in countries of all income levels. Type 1 diabetes, once known as juvenile diabetes or insulin-dependent diabetes, is a chronic condition in which the pancreas produces little or no insulin by itself. For people living with diabetes, access to affordable treatment, including insulin, is critical to their survival. There is a globally agreed target to halt the rise in diabetes and obesity by 2025.</p>
+        <p><a class="btn btn-secondary" href="https://www.who.int/health-topics/diabetes#tab=tab_1">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg-->
+        <img src="https://logos-world.net/wp-content/uploads/2021/03/World-Health-Organization-WHO-Logo.png" width="500" height="300">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">World Diabetes Day</h2>
+        <p class="lead">WDD is the world’s largest diabetes awareness campaign reaching a global audience of over 1 billion people in more than 160 countries. The campaign draws attention to issues of paramount importance to the diabetes world and keeps diabetes firmly in the public and political spotlight.</p>
+        <p><a class="btn btn-secondary" href="https://worlddiabetesday.org/about/">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg-->
+        <img src="https://www.fullview.co.za/images/world-diabetes-day.jpg" width="500" height="400">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Some Recomendations</h2>
+        <p class="lead">Lifestyle changes can help prevent the onset of type 2 diabetes, the most common form of the disease. Prevention is especially important if you're currently at an increased risk of type 2 diabetes because of excess weight or obesity, high cholesterol, or a family history of diabetes.</p>
+        <p><a class="btn btn-secondary" href="https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-5">
+        <!--svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg-->
+        <img src="https://images.indianexpress.com/2021/01/diabetes_1200_getty.jpg" width="500" height="300">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 MLOps Final Proyect &middot; by Daniel Herrera & Victor Molina</p>
+  </footer>
+</main>
+
+
+    <script src="{{ url_for('static',filename='assets/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+      
+  </body>
+</html>

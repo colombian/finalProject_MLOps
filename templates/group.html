@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Diabetes predictor</title>
+    <link rel="icon" type="image/png" href="https://icons-for-free.com/download-icon-science-131964743754853130_512.png">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='styles/carousel.css') }}" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Predictions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/predict/individual">Individual</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/predict/group">Group</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!--Spacer for improved visualization-->
+    </div>
+
+    <div class="container marketing">
+      <form method="POST" action="/results/group" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-md-3">
+            <input type="file" id="file" name="file" accept=".csv">
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-success" type='submit' value='Submit'>Process</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <hr class="featurette-divider">
+
+<main>
+      <!-- FOOTER -->
+  <footer class="container">
+    <!--p class="float-end"><a href="#">Back to top</a></p-->
+    <p>&copy; 2021 MLOps Final Proyect &middot; by Daniel Herrera & Victor Molina</p>
+  </footer>
+</main>
+
+
+    <script src="{{ url_for('static',filename='assets/dist/js/bootstrap.bundle.min.js') }}"></script>
+
+      
+  </body>
+</html>
